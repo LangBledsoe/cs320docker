@@ -28,7 +28,7 @@ RUN apt-get update \
 #USER opam
 
 # Install Opam packages
-RUN opam init && \
+RUN opam init --disable-sandboxing -y \
     opam update && \
     opam install \
     merlin \
